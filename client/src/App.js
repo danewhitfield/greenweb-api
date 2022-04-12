@@ -8,10 +8,12 @@ function App() {
   const [resultData, setResultData] = useState("");
 
   return (
-    <div className="App">
+    <div className="main">
       <Header />
-      <InputData setResultData={setResultData} />
-      <Results resultData={resultData} />
+      <div className="App">
+        <InputData setResultData={setResultData} />
+        <Results resultData={resultData} />
+      </div>
     </div>
   );
 }
