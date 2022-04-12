@@ -134,11 +134,13 @@ input:focus {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
+  width: 80vw;
   gap: 10px;
 }
 
 .result-card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 300px;
@@ -147,7 +149,78 @@ input:focus {
   background-color: #82aa50d0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .result-card:hover {
   background-color: rgba(121, 211, 12, 0.481);
   cursor: pointer;
+}
+
+#post-code::before {
+  content: "Post Code";
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+#region::before {
+  content: "Region";
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+#date::before {
+  content: "Date";
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+#i-forecast::before {
+  content: "Intensity Forecast";
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+#i-index::before {
+  content: "Intensity Index";
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.modal-title {
+  color: #333;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  height: 80%;
+  width: 100%;
+}
+
+.postcode-modal {
+  z-index: 1000;
 }

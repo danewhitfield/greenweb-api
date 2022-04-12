@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div className="App">
         <InputData setResultData={setResultData} />
-        <Results resultData={resultData} />
+        {resultData && <Results resultData={resultData} />}
       </div>
     </div>
   );
